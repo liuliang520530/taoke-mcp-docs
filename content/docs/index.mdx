@@ -1,0 +1,81 @@
+---
+title: 快速开始
+description: 开始使用 mcp-taoke
+---
+
+或许你已经听说过 mcp，或许你已经会使用其它 mcp，mcp-taoke 跟其它 mcp 工具一样。
+如果你不了解 mcp 也没关系，会用就行，简单几个配置搞定，非常简单
+
+## 第一步：下载 nodejs
+
+1. 访问 [Node.js 官网](https://nodejs.org/zh-cn)下载 LTS 版本的 Node.js，下载后双击，直接无脑下一步安装即可
+2. 安装完成后，打开命令行工具，输入 `node -v`，如果显示版本号，说明安装成功
+
+## 第二步：下载 [Cherry Studio](https://cherry-ai.com/) 安装，无脑下一步安装
+
+-   你需要一个能接入 ai 的客户端，比如：Cherry Studio、Claude Desktop、vscode 和 cline、cursor、阿里的百炼等等
+-   这里在推荐使用 Cherry Studio，后面也会以这个为例，下载地址在下面表格，其它客户端 mcp 都一样
+
+### AI 客户端列表
+
+| 名称           | 网址                                  | 系统支持              |
+| -------------- | ------------------------------------- | --------------------- |
+| Cursor         | https://www.cursor.com/               | Windows、MacOS、Linux |
+| Cherry Studio  | https://cherry-ai.com/                | Windows、MacOS、Linux |
+| Sire           | https://sire.app/                     | Windows、MacOS        |
+| Continue       | https://continue.dev/                 | Windows、MacOS        |
+| Cline          | https://marketplace.visualstudio.com/ | Windows、MacOS        |
+| ChatMCP        | https://github.com/dao-ai/chat-mcp    | Windows、MacOS、Linux |
+| Claude Desktop | https://claude.ai/downloads           | Windows、MacOS        |
+| ClaudeMind     | https://claudemind.com/               | Windows、MacOS        |
+| HyperChat      | https://github.com/BigSur             | Windows、MacOS        |
+| Zed            | https://zed.dev/                      | Windows、MacOS        |
+| ChatWise       | https://chatwise.app/                 | Windows、MacOS        |
+
+## 第三步：
+
+-   在 Cherry Studio 配置 mcp，其实就是一段 json 文本，复制粘贴上去即可
+-   关于 Cherry Studio 配置模型，可参考官方，一看就懂，一看就会，一看就忘不了
+
+将以下 JSON 配置复制到 Cherry Studio 的 MCP 配置中：
+
+```json
+{
+	"mcpServers": {
+		"taobao-mcp": {
+			"name": "导购助手",
+			"type": "stdio",
+			"isActive": true,
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npx",
+				"-y",
+				"@liuliang520500/sinataoke_cn@latest",
+				"g:win11desktop/logs/"
+			],
+			"env": {
+				"ENV_URL": "http://rap2api.taobao.org/app/mock/304812/taoke-mcp",
+				"ENV_SECRET": "url:mcp.sinataoke.cn",
+				"ENV_OVERRIDE": "false",
+				"TAOBAO_PID": "淘宝PID",
+				"TAOBAO_SESSION": "淘宝授权token，上面有授权链接，授权后，复制token到这里",
+				"JD_KEY": "union.jd.com上去取",
+				"JD_PID": "union.jd.com上去取",
+				"PDD_PID": "拼多多PID",
+				"PDD_SESSION_TOKEN": "拼多多授权token，上面有授权链接"
+			}
+		}
+	}
+}
+```
+
+## 关于 taoke-mcp
+
+<Cards>
+	<Card title="github源" href="https://github.com/liuliang520530/taoke-mcp" />
+	<Card
+		title="npmjs源"
+		href="https://www.npmjs.com/package/@liuliang520500/sinataoke_cn"
+	/>
+</Cards>

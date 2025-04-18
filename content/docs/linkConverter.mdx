@@ -1,0 +1,24 @@
+---
+title: 淘宝链接转换参数
+description: 基于淘宝开放平台API文档
+---
+
+淘宝开放平台 API 文档：[taobao.tbk.dg.vegas.tlj.create](https://open.taobao.com/api.htm?docId=64756&docType=2&scopeId=13991)
+
+| 参数名         | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                      |
+| -------------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| biz_scene_id   | string | 非必填   | 1-动态 ID 转链场景，2-消费者比价场景，4-，示例值：1                                                                                                                                                                                                       |
+| promotion_type | string | 非必填   | 1-自购省，2-推广赚（代理模式专属 ID，代理模式必填，其它模式不用填写本字段），示例值：2                                                                                                                                                                    |
+| material_list  | string | 非必填   | 物料列表，可以为 url 或淘口令,多个时使用英文逗号拼接传入（邀约制权限有申请门槛，权限分为 ① 联盟推广链接转链；② 天猫/淘宝复制链接转链；如有相关需求请在权限申请时同步说明），示例值：https://s.click.taobao.com/pQBDhNu,https://s.click.taobao.com/pQBDhNu |
+| relation_id    | string | 非必填   | 渠道管理 ID（如是主站选品推广场景，必须入参该字段，且 bizSceneId 字段需入参 2-消费者比价场景，否则二次转链失败），示例值：123456                                                                                                                          |
+| seller_id_list | string | 非必填   | 卖家 ID 列表,多个时使用英文逗号拼接传入，示例值：123456                                                                                                                                                                                                   |
+| item_id_list   | string | 非必填   | 商品 ID 列表,多个时使用英文逗号拼接传入，示例值：qYtxrMJOC8tmtM-Qq0Z65Sbbq5DqZ9                                                                                                                                                                           |
+| page_id_list   | string | 非必填   | 会场 ID 列表,多个时使用英文逗号拼接传入，示例值：123456                                                                                                                                                                                                   |
+| target_item    | object | 非必填   | 会场页面内定坑商品                                                                                                                                                                                                                                        |
+| item_dto       | array  | 非必填   | 商品转链，包含字段：item_id, sku_id, is_target_coupon, coupon_id, external_id, dx, manage_pub_id                                                                                                                                                          |
+| page_dto       | array  | 非必填   | 会场页面转链，包含字段：page_id, target_item_list                                                                                                                                                                                                         |
+| shop_dto       | array  | 非必填   | 店铺转链，包含字段：shop_id                                                                                                                                                                                                                               |
+| material_dto   | array  | 非必填   | 链接/口令转链，包含字段：material_url, is_target_coupon, coupon_id                                                                                                                                                                                        |
+| special_id     | string | 非必填   | 会员运营 id，示例值：123                                                                                                                                                                                                                                  |
+| uvid           | string | 非必填   | 加密用户标识，示例值：adjso7389rbnasd                                                                                                                                                                                                                     |
+| qmtid          | string | 非必填   | 启明系统任务 ID，示例值：123                                                                                                                                                                                                                              |

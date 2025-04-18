@@ -1,0 +1,12 @@
+---
+title: 淘宝链接解析参数
+description: 基于淘宝开放平台API文档
+---
+
+淘宝开放平台 API 文档：[taobao.tbk.sc.general.link.parse](https://open.taobao.com/api.htm?docId=taobao.tbk.sc.general.link.parse)
+
+| 参数名       | 类型   | 是否必填 | 描述                                                                                                                             |
+| ------------ | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| relation_id  | string | 非必填   | 渠道管理 ID（如是主站选品推广场景，必须入参该字段，且 bizSceneId 字段需入参 2-消费者比价场景，否则二次转链失败），示例值：123456 |
+| material_dto | array  | 非必填   | 链接/口令转链                                                                                                                    |
+| fields       | string | 非必填   | 有 origin_pid 使用场景需入参，示例值：origin_pid                                                                                 |

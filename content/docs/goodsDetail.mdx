@@ -1,0 +1,14 @@
+---
+title: 拼多多商品详情查询参数
+description: 基于拼多多开放平台API文档
+---
+
+拼多多开放平台API文档：[pdd.ddk.oauth.goods.detail](https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.detail)
+
+| 参数名 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| goods_img_type | number | 非必填 | 商品主图类型：1-场景图，2-白底图，默认为0 |
+| goods_sign | string | 非必填 | 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：[https://jinbao.pinduoduo.com/qa-system?questionId=252](https://jinbao.pinduoduo.com/qa-system?questionId=252) |
+| need_sku_info | boolean | 非必填 | 是否获取sku信息，默认false不返回。（特殊渠道权限，需额外申请） |
+| risk_params | object | 非必填 | 风控参数 |
+| search_id | string | 非必填 | 搜索id，建议填写，提高收益。来自pdd.ddk.goods.recommend.get、pdd.ddk.goods.search、pdd.ddk.top.goods.list.query等接口 |

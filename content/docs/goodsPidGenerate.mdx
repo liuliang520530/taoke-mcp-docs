@@ -1,0 +1,12 @@
+---
+title: 拼多多PID生成参数
+description: 基于拼多多开放平台API文档
+---
+
+拼多多开放平台 API 文档：[pdd.ddk.oauth.goods.pid.generate](https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.pid.generate)
+
+| 参数名         | 类型   | 是否必填 | 描述                                         |
+| -------------- | ------ | -------- | -------------------------------------------- |
+| number         | number | 必填     | 要生成的推广位数量，默认为 10，范围为：1~100 |
+| p_id_name_list | array  | 非必填   | 推广位名称，例如`["名称1","名称2"]`          |
+| media_id       | number | 非必填   | 媒体 id                                      |

@@ -1,0 +1,14 @@
+---
+title: 拼多多转链接口参数
+description: 基于拼多多开放平台API文档
+---
+
+拼多多开放平台 API 文档：[pdd.ddk.oauth.goods.zs.unit.url.gen](https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.zs.unit.url.gen)
+
+| 参数名                    | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                             |
+| ------------------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| source_url                | string  | 必填     | 需转链的链接，支持拼多多商品链接、进宝长链/短链（即为 pdd.ddk.goods.promotion.url.generate 接口生成的长短链）                                                                                                                                                                                                                    |
+| custom_parameters         | string  | 非必填   | 自定义参数，为链接打上自定义标签；自定义参数最长限制 64 个字节；格式为： `{"uid":"11111","sid":"22222"}` ，其中 uid 用户唯一标识，可自行加密后传入，每个用户仅且对应一个标识，必填； sid 上下文信息标识，例如 sessionId 等，非必填。该 json 字符串中也可以加入其他自定义的 key。（如果使用 GET 请求，请使用 URLEncode 处理参数） |
+| generate_schema_url       | boolean | 非必填   | 是否返回 schema URL                                                                                                                                                                                                                                                                                                              |
+| generate_we_app_long_link | boolean | 非必填   | 是否生成微信 LongLink                                                                                                                                                                                                                                                                                                            |
+| generate_short_link       | boolean | 非必填   | 是否生成微信 shortlink 链接，仅支持单品，单个渠道每天生成的 shortLink 数量有限，请合理生成 shortLink 链接                                                                                                                                                                                                                        |

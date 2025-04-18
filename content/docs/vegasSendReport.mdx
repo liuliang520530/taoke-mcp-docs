@@ -1,0 +1,16 @@
+---
+title: 淘宝客查询红包发放个数参数
+description: 基于淘宝开放平台API文档
+---
+
+淘宝开放平台API文档：[taobao.tbk.sc.vegas.send.report](https://open.taobao.com/api.htm?docId=taobao.tbk.sc.vegas.send.report)
+
+| 参数名 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| biz_date | string | 必填 | 统计日期，示例值：20191201 |
+| relation_id | number | 非必填 | 渠道关系id，示例值：111 |
+| activity_id | number | 非必填 | 已下线，后续不需要填写，示例值：1 |
+| page_no | number | 非必填 | 页码，示例值：1 |
+| page_size | number | 非必填 | 每页大小，示例值：10 |
+| rpt_dim | string | 非必填 | 查询维度，不填写默认是pid维度，示例值：pid/relation |
+| activity_category | number | 非必填 | 查询红包类型，1-超级红包，2-福利购，3-签到红包，4-福利直降，5-幸运赢免单，不传时默认查询超级红包数据，示例值：1 |

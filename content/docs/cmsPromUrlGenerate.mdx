@@ -1,0 +1,16 @@
+---
+title: 拼多多CMS推广链接生成参数
+description: 基于拼多多开放平台API文档
+---
+
+拼多多开放平台API文档：[pdd.ddk.oauth.cms.prom.url.generate](https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.cms.prom.url.generate)
+
+| 参数名 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| channel_type | number | 非必填 | 0, "1.9包邮"；1, "今日爆款"； 2, "品牌清仓"； 4,"PC端专属商城(已下线,会生成默认商城)" |
+| generate_mobile | boolean | 非必填 | 是否生成手机跳转链接。true-是，false-否，默认false |
+| generate_schema_url | boolean | 非必填 | 是否返回 schema URL |
+| generate_short_url | boolean | 非必填 | 是否生成短链接，true-是，false-否 |
+| generate_we_app | boolean | 非必填 | 是否生成拼多多福利券微信小程序推广信息 |
+| keyword | string | 非必填 | 搜索关键词 |
+| multi_group | boolean | 非必填 | 单人团多人团标志。true-多人团，false-单人团 默认false |
