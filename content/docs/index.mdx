@@ -6,9 +6,36 @@ description: 开始使用 mcp-taoke
 或许你已经听说过 mcp，或许你已经会使用其它 mcp，mcp-taoke 跟其它 mcp 工具一样。
 如果你不了解 mcp 也没关系，会用就行，简单几个配置搞定，非常简单
 
+# github:
+
+https://github.com/liuliang520530/taoke-mcp/
+
 ## 视频教程
 
 -   [https://www.bilibili.com/video/BV1tE5jzLEMu/](https://www.bilibili.com/video/BV1tE5jzLEMu/)
+
+
+## smithery服务托管
+https://smithery.ai/server/@liuliang520530/taoke-mcp
+
+## 支持docker部署
+https://hub.docker.com/r/liuliang520500/taoke-mcp
+
+```shell
+docker run -dit \
+--name taoke-mcp  \
+--restart always \
+-p 8081:8081 \
+-e ENV_URL=https://config.sinataoke.cn/api/mcp/secret \
+-e ENV_SECRET=url:mcp.sinataoke.cn \
+-e ENV_OVERRIDE=false \
+liuliang520500/taoke-mcp
+
+
+你可以添加更多的环境变量 -e，参考下面的stdio配置
+
+```
+
 
 ## 第一步：下载 nodejs
 
